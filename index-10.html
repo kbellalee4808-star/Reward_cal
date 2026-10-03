@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>리워드로 얼마까지 예약할까? | Cruise Club</title>
+<meta name="description" content="내 리워드를 넣으면 예약할 수 있는 크루즈 금액을 바로 알려드려요">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kbellalee4808-star.github.io/Reward_cal/">
+<meta property="og:title" content="리워드로 얼마까지 예약할까?">
+<meta property="og:description" content="내 리워드를 넣으면 예약할 수 있는 크루즈 금액을 바로 알려드려요">
+<meta property="og:image" content="https://kbellalee4808-star.github.io/-3.X/hero-ship.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'GmarketSans';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');font-weight:700;font-display:swap;}
+:root{--navy:#1B3A5C;--gold:#D4A94A;--ivory:#FAF7F2;--ink:#22303d;--muted:#6b7785;--line:#e6dfd2;--sky:#eef4fa;--red:#c0392b;--green:#1a7a4a;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{background:var(--ivory);color:var(--ink);font-family:'Noto Sans KR',-apple-system,sans-serif;font-size:15px;line-height:1.7;word-break:keep-all;-webkit-tap-highlight-color:transparent;min-height:100dvh;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom);}
+.wrap{max-width:520px;margin:0 auto;padding:0 18px 48px;}
+header{background:var(--navy);color:#fff;padding:32px 22px 28px;margin:0 -18px 20px;}
+.back[hidden]{display:none;}.back{display:inline-block;color:var(--gold);font-size:13px;font-weight:700;text-decoration:none;margin-bottom:16px;}
+.ov{color:var(--gold);font-family:'GmarketSans',sans-serif;font-size:12px;letter-spacing:1px;margin-bottom:6px;}
+h1{font-family:'GmarketSans','Noto Sans KR',sans-serif;font-size:25px;line-height:1.4;}
+header p{color:rgba(255,255,255,.78);font-size:14px;margin-top:10px;}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 18px;margin-bottom:14px;}
+.card h2{font-family:'GmarketSans','Noto Sans KR',sans-serif;font-size:17px;color:var(--navy);margin-bottom:12px;}
+label{display:block;font-size:13px;font-weight:700;color:var(--muted);margin-bottom:6px;}
+.field{display:flex;align-items:center;gap:8px;border:2px solid var(--navy);border-radius:12px;padding:6px 14px;background:#fff;}
+.field input{flex:1;min-width:0;border:0;outline:0;font:900 24px 'Noto Sans KR',sans-serif;color:var(--navy);background:transparent;padding:6px 0;-webkit-appearance:none;}
+.field span{font-weight:900;color:var(--navy);}
+.field:focus-within{outline:3px solid var(--gold);outline-offset:2px;}
+.res{border-radius:14px;padding:16px;margin-top:12px;}
+.res .k{font-size:13px;font-weight:700;}
+.res .v{font-family:'GmarketSans','Noto Sans KR',sans-serif;font-size:28px;line-height:1.3;margin:4px 0;}
+.res .d{font-size:12.5px;}
+.r1{background:var(--navy);color:#fff;}.r1 .v{color:var(--gold);}.r1 .d{color:rgba(255,255,255,.75);}
+.r2{background:var(--sky);color:var(--navy);}.r2 .d{color:var(--muted);}
+.note{font-size:12.5px;color:var(--muted);line-height:1.8;}
+.tip{background:#fbf5e6;border:1px solid #ecd9a8;border-radius:10px;padding:12px 14px;font-size:13px;}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.chips button{all:unset;cursor:pointer;font-size:13px;font-weight:700;color:var(--navy);background:var(--sky);border-radius:20px;padding:7px 13px;}
+.chips button:focus-visible{outline:2px solid var(--gold);}
+.share{all:unset;box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;min-height:54px;margin-top:8px;background:var(--gold);color:var(--navy);font-weight:900;font-size:15px;border-radius:14px;cursor:pointer;}
+.share:focus-visible{outline:3px solid var(--navy);outline-offset:2px;}
+@media (max-width:360px){h1{font-size:22px;}.res .v{font-size:24px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" id="backHub" hidden href="https://kbellalee4808-star.github.io/cruiseclub_hub/">‹ 크루즈 허브로</a>
+  <div class="ov">REWARD</div>
+  <h1>내 리워드로<br>얼마짜리 크루즈?</h1>
+  <p>리워드를 넣으면 올 리워드로 예약할 수 있는 크루즈 금액을 알려드려요.</p>
+</header>
+<section class="card">
+  <h2>내 리워드 입력</h2>
+  <label for="rp">가지고 있는 리워드 포인트</label>
+  <div class="field"><input id="rp" type="number" inputmode="numeric" min="0" value="2700"><span>RP</span></div>
+  <div class="chips">
+    <button type="button" data-v="1500">1,500</button><button type="button" data-v="2800">2,800</button><button type="button" data-v="5000">5,000</button><button type="button" data-v="10000">10,000</button>
+  </div>
+
+  <div class="res r1" style="text-align:center">
+    <div class="k">💎 올 리워드로 예약할 수 있는 크루즈</div>
+    <div class="v" id="max">$1,800</div>
+    <div class="d">이하 크루즈를 고르시면 <b style="color:#fff">현금 없이</b> 리워드만으로 예약돼요</div>
+  </div>
+
+  <div class="res r2">
+    <div class="k" style="margin-bottom:8px">이렇게 쓰여요</div>
+    <div style="display:flex;justify-content:space-between;font-size:14px;padding:4px 0"><span>① 요금의 절반 <small style="color:var(--muted)">(1 RP = $1)</small></span><b id="h1">900 RP</b></div>
+    <div style="display:flex;justify-content:space-between;font-size:14px;padding:4px 0"><span>② 나머지 절반 <small style="color:var(--muted)">(2 RP = $1)</small></span><b id="h2">1,800 RP</b></div>
+    <div style="display:flex;justify-content:space-between;font-size:14px;padding:8px 0 0;margin-top:6px;border-top:1px solid #cfdcea"><span><b>합계</b></span><b id="tot">2,700 RP</b></div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>꼭 확인하세요</h2>
+  <p class="note">· 금액은 <b>세금이 포함된 크루즈 요금</b> 기준이에요. 선상 팁은 따로 내요.<br>
+  · 올 리워드 결제는 <b>출발일이 270일(약 9개월) 이상 남은 크루즈</b>부터 됩니다.<br>
+  · 실제 금액은 선사·일정·객실에 따라 달라지니 예약 화면의 최종 금액으로 다시 확인해 주세요.</p>
+  <a href="https://kbellalee4808-star.github.io/9month_cal/" style="display:flex;align-items:center;justify-content:center;min-height:50px;margin-top:14px;border:1.5px solid var(--navy);border-radius:12px;color:var(--navy);font-weight:900;text-decoration:none">📅 언제부터 예약 가능한지 보기</a>
+</section>
+<button class="share" id="shareBtn" type="button">🔗 이 계산기 공유하기</button>
+</div>
+<script>
+var rp=document.getElementById('rp');
+function n(x){return Math.floor(x).toLocaleString();}
+function calc(){var r=Math.max(0,parseFloat(rp.value)||0),p=Math.floor(r/1.5),h=p/2;
+document.getElementById('max').textContent='$'+n(p);
+document.getElementById('h1').textContent=n(h)+' RP';
+document.getElementById('h2').textContent=n(h*2)+' RP';
+document.getElementById('tot').textContent=n(h*3)+' RP';}
+rp.addEventListener('input',calc);
+document.querySelectorAll('.chips button').forEach(function(b){b.addEventListener('click',function(){rp.value=b.dataset.v;calc();});});
+calc();
+(function(){
+var u='https://kbellalee4808-star.github.io/Reward_cal/';
+if(document.referrer.indexOf('cruiseclub_hub')>-1){document.getElementById('backHub').hidden=false;}
+document.getElementById('shareBtn').addEventListener('click',function(){
+  var b=this;
+  function done(){b.textContent='✓ 링크가 복사됐어요';setTimeout(function(){b.textContent='🔗 이 계산기 공유하기';},2000);}
+  function fb(){var a=document.createElement('textarea');a.value=u;document.body.appendChild(a);a.select();try{document.execCommand('copy');done();}catch(e){}document.body.removeChild(a);}
+  if(navigator.share){navigator.share({title:'리워드로 얼마까지 예약할까?',url:u}).catch(function(){});}
+  else if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(done,fb);}
+  else{fb();}
+});
+})();
+</script>
+</body>
+</html>
